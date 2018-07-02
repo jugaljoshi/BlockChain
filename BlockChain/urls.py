@@ -22,7 +22,10 @@ urlpatterns = [
 ]
 
 urlpatterns += [
+    url(r'^node/connect', NodeConnect.as_view()),
     url(r'^chain/list', GetChainList.as_view()),
-    url(r'^chain/create', CreateBlock.as_view()),
-    url(r'^chain/valid', IsValidChain.as_view())
+    url(r'^add/transaction', AddTransaction.as_view()),
+    url(r'^mine/block', MineBlock.as_view()),
+    url(r'^chain/valid', IsValidChain.as_view()),
+    url(r'^sync/chain')
 ]
